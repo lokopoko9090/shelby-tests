@@ -1,0 +1,6 @@
+# Temporary Shelby test files
+test-shelby.txt
+downloaded-test.txt
+__pycache__/
+*.pyc
+.DS_Store
