@@ -1,20 +1,51 @@
-# Shelby Testnet Blob Storage Monitor
+# 🚀 Shelby Testnet Blob Storage Tester
 
-Simple tests and monitoring for Shelby (shelbynet) blob upload and download.
+**Professional test suite for Shelby decentralized blob storage on Aptos (Shelbynet)**
 
-## Test Results (March 26, 2026)
+Clean, reliable and well-documented Python script for testing upload/download performance and content integrity on **Shelby Testnet**.
 
-**Network:** shelbynet (Testnet)  
-**Account:** `0x2b2b059354ff1d14b0ac941174057c3824aecbde0c7ff173048c11cfd53dfbd6`
+---
 
-### Performance
-- **Upload time**: ~10.09 seconds
-- **Download time**: ~0.6 seconds
-- **File size**: small text file
-- **Expiration**: 1 day
+## ✨ Features
 
-### Commands Used
+- ✅ Automatic unique blob naming with timestamp
+- ✅ Upload with customizable expiration (`--expiration tomorrow`)
+- ✅ Download with force overwrite
+- ✅ Full content verification (original vs downloaded)
+- ✅ Detailed timing (upload + download)
+- ✅ Automatic cleanup of temporary files
+- ✅ Clean English output with emojis and links
+- ✅ Easy wallet configuration
+- ✅ `.gitignore` included
+
+---
+
+## 📊 Latest Test Results (Example)
+
+| Operation     | Time     | Status          | Content Check     |
+|---------------|----------|-----------------|-------------------|
+| Upload        | ~9-12s   | ✅ Success      | -                 |
+| Download      | ~4-6s    | ✅ Success      | ✅ Matches        |
+
+**Network**: `shelbynet` (Shelby Testnet)  
+**Location**: Ivano-Frankivsk, Ukraine 🇺🇦
+
+---
+
+## 🛠 Requirements
+
+- Python 3.8 or higher
+- Node.js + npm
+- Shelby CLI: `npm install -g @shelby-protocol/cli`
+- Configured Shelby account on **shelbynet** (`shelby init`)
+
+Official Docs: [https://docs.shelby.xyz/tools/cli](https://docs.shelby.xyz/tools/cli)
+
+---
+
+## 🚀 Quick Start
+
 ```bash
-shelby upload test-shelby.txt my-first-blob.txt --expiration "tomorrow" --assume-yes
-
-shelby download my-first-blob.txt downloaded-test.txt
+git clone https://github.com/lokopoko9090/shelby-tests.git
+cd shelby-tests
+python shelby_test.py
